@@ -37,7 +37,7 @@ export default function App() {
         </p>
         <img
           src="./src/images/pattern-divider-desktop.svg"
-          alt="Divider"
+          alt="Divisor"
           className="w-full"
         />
 
@@ -48,7 +48,7 @@ export default function App() {
         >
           <img
             src="./src/images/icon-dice.svg"
-            alt="Dice"
+            alt="quadrado"
             className="w-6 h-6"
           />
         </button>
