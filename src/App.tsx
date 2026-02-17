@@ -1,5 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
+import patternDividerDesktop from './images/pattern-divider-desktop.svg';
+import patternDividerMobile from './images/pattern-divider-mobile.svg';
+import iconDice from './images/icon-dice.svg';
 
 interface Advice {
   advice: string;
@@ -36,9 +39,14 @@ export default function App() {
           {advice?.advice || "Clique nos dados para obter alguns conselhos!"}
         </p>
         <img
-          src="./src/images/pattern-divider-desktop.svg"
+          src={patternDividerMobile}
           alt="Divisor"
-          className="w-full"
+          className="w-full md:hidden"
+        />
+        <img
+          src={patternDividerDesktop}
+          alt="Divisor"
+          className="w-full hidden md:block"
         />
 
         <button
@@ -47,7 +55,7 @@ export default function App() {
           onClick={handleClick}
         >
           <img
-            src="./src/images/icon-dice.svg"
+            src={iconDice}
             alt="quadrado"
             className="w-6 h-6"
           />
