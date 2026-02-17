@@ -17,10 +17,10 @@ export default function App() {
   const handleClick = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get(URL_ADVICE, {
+      const response = await axios.get(URL_ADVICE, {
         validateStatus: (status) => status === 200,
       });
-
+      const data = await response.data;
       setAdvice(data.slip);
     } catch (error) {
       console.error("Erro ao buscar um conselho:", error);
